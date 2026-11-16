@@ -1,7 +1,7 @@
-<!DOCTYPE html>
-<!-- saved from url=(0099)file:///Users/emilypensinger/Documents/Codex/2026-11-16/ope/outputs/hyperlink_expedition.html#japan -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>The Hyperlink Expedition | An Interactive Web Adventure</title>
 <style>
 :root{color-scheme:light;--ink:#2a2d23;--forest:#25372c;--moss:#354a39;--rust:#813d27;--paper:#fff9e9;--sand:#ede0c1;--line:#cdbc96;--serif:Georgia,"Times New Roman",serif}
@@ -63,10 +63,10 @@ details summary{cursor:pointer;font-weight:750;color:var(--forest)}
 </head>
 <body><div class="wrap">
 <header><div class="eyebrow">A World Wide Web adventure</div><h1>The Hyperlink Expedition</h1><p class="intro">Follow a trail of <strong>hyperlinks</strong> across a miniature World Wide Web. Hunt for a lost relic, chart two routes to a tidal sanctuary, and find a hidden archive.</p></header>
-<div class="toolbar"><button class="btn primary" id="start">Restart expedition</button><button class="btn" id="previous" disabled="">← Previous page</button><button class="btn" id="next" disabled="">Next page →</button></div>
+<div class="toolbar"><button class="btn primary" id="start">Restart expedition</button><button class="btn" id="previous">← Previous page</button><button class="btn" id="next">Next page →</button></div>
 <div class="layout">
-<main class="panel"><div class="panelhead"><h2 id="missionName">Expedition 1 — The Lost Sunstone</h2></div><div class="panelbody"><div class="missionbox" id="objective"><strong>Field assignment</strong><p>Start with the <strong>Japan Expedition Notes</strong>. Follow the clues to the <strong>Lost Sunstone</strong>. Can you get there in four hyperlink clicks?</p></div><div class="stats"><div class="stat"><strong id="clickCount">0</strong><span>Hyperlinks clicked</span></div><div class="stat"><strong id="uniqueCount">1</strong><span>Unique pages visited</span></div><div class="stat"><strong id="websiteCount">1</strong><span>Websites visited</span></div></div><div id="alert" role="status" aria-live="polite"></div><div class="browser" aria-label="Simulated browser"><div class="browserbar"><span class="address-label">Web address</span><div class="address" id="address">https://field-atlas.test/japan/expedition-notes</div></div><article class="webpage" id="webpage" aria-live="polite"><div class="sitebrand">field-atlas.test</div><h2>Japan Expedition Notes</h2><p>An expedition notebook from Japan shows a sunburst drawn above the outline of Mount Fuji. The same mark appears beside a short entry: “Follow the stone trail.”</p><h3>Follow a trail</h3><ul class="links"><li><a href="file:///Users/emilypensinger/Documents/Codex/2026-11-16/ope/outputs/hyperlink_expedition.html#mountfuji" data-target="mountfuji">Open the Mount Fuji field guide ↗</a></li><li><a href="file:///Users/emilypensinger/Documents/Codex/2026-11-16/ope/outputs/hyperlink_expedition.html#harbor" data-target="harbor">Browse the harbor chart ↗</a></li></ul></article></div><p class="soft" style="font-size:.83rem">Navigation rule: Only the underlined links <em>inside</em> the webpage count toward the expedition. The Previous and Next buttons are for reviewing your navigation and do not count as hyperlink clicks.</p></div></main>
-<aside><section class="panel"><div class="panelhead"><h2>Expedition map</h2></div><div class="panelbody"><div class="missionlist" id="missions"><button class="missionpick active" aria-pressed="true" data-mission="0"><strong>1. The Lost Sunstone</strong><small>Start: Japan Expedition Notes → Goal: Lost Sunstone</small></button><button class="missionpick " aria-pressed="false" data-mission="1"><strong>2. Two Trails to the Tidal Sanctuary</strong><small>Start: Harbor Chart → Goal: Tidal Sanctuary</small></button><button class="missionpick " aria-pressed="false" data-mission="2"><strong>3. The Hidden Archive</strong><small>Start: Founders’ Broadside → Goal: Hidden Archive</small></button></div></div></section><section class="panel" style="margin-top:16px"><div class="panelhead"><h2>Field journal</h2></div><div class="panelbody"><div class="sideText">Pages you reached by following hyperlinks</div><ol class="history" id="history"><li><strong>Japan Expedition Notes</strong> <span class="tag">field-atlas.test</span> <span class="soft">(start)</span></li></ol><p class="sideText" id="siteChanges">Times you crossed to a different website: 0</p><button class="btn" id="copyLog">Copy my route</button></div></section></aside>
+<main class="panel"><div class="panelhead"><h2 id="missionName">Expedition</h2></div><div class="panelbody"><div class="missionbox" id="objective"></div><div class="stats"><div class="stat"><strong id="clickCount">0</strong><span>Hyperlinks clicked</span></div><div class="stat"><strong id="uniqueCount">1</strong><span>Unique pages visited</span></div><div class="stat"><strong id="websiteCount">1</strong><span>Websites visited</span></div></div><div id="alert" role="status" aria-live="polite"></div><div class="browser" aria-label="Simulated browser"><div class="browserbar"><span class="address-label">Web address</span><div class="address" id="address"></div></div><article class="webpage" id="webpage" aria-live="polite"></article></div><p class="soft" style="font-size:.83rem">Navigation rule: Only the underlined links <em>inside</em> the webpage count toward the expedition. The Previous and Next buttons are for reviewing your navigation and do not count as hyperlink clicks.</p></div></main>
+<aside><section class="panel"><div class="panelhead"><h2>Expedition map</h2></div><div class="panelbody"><div class="missionlist" id="missions"></div></div></section><section class="panel" style="margin-top:16px"><div class="panelhead"><h2>Field journal</h2></div><div class="panelbody"><div class="sideText">Pages you reached by following hyperlinks</div><ol class="history" id="history"></ol><p class="sideText" id="siteChanges"></p><button class="btn" id="copyLog">Copy my route</button></div></section></aside>
 </div>
 <details><summary>Before you begin: what to know about the web</summary><p>A <strong>webpage</strong> is one document. A <strong>website</strong> is a collection of pages, usually sharing a domain name. A <strong>hyperlink</strong> connects a page to another page or resource. The <strong>World Wide Web</strong> is a network of linked resources accessed over the internet. Links can point to pages on the same website or a different website. A link from A to B does <em>not</em> automatically create a link from B back to A.</p><p>The websites, artifacts, and clues in these expeditions are fictional. The web addresses are simulated within this HTML file. No real internet connection is needed.</p></details>
 <p class="footer">Classroom activity · Works offline</p>
@@ -74,85 +74,100 @@ details summary{cursor:pointer;font-weight:750;color:var(--forest)}
 <script>
 'use strict';
 const pages = {
+  fieldlog: {
+    title: 'Expedition Supply Log', site: 'field-atlas.test', path: '/japan/supply-log',
+    body: 'The mountain party signed out lanterns, rope, and rolls of paper for recording markings. A note in the margin names the field guide they carried.',
+    links: [['mountfuji', 'Open the Mount Fuji field guide'], ['japan', 'Recheck the expedition notes'], ['harbor', 'Browse the harbor chart']]
+  },
+  ledger: {
+    title: 'Harbor Master’s Ledger', site: 'mariners-guild.test', path: '/records/harbor-ledger',
+    body: 'The harbor master logged a survey ship that never returned and a delivery of lamp oil to the signal tower. Both entries refer to the same harbor chart.',
+    links: [['tower', 'Trace the delivery to the signal tower'], ['harbor', 'Look up the original harbor chart'], ['wreck', 'Read the missing ship’s wreck survey']]
+  },
+  printer: {
+    title: 'Old Print Shop', site: 'civic-archives.test', path: '/documents/old-print-shop',
+    body: 'The print shop’s maker’s mark is a tiny ink roller. A work order shows that the shop printed copies of the surveyor’s map as well as the town announcement.',
+    links: [['seal', 'Compare the town seal'], ['survey', 'Look up the surveyor’s map'], ['broadside', 'Return to the Founders’ Broadside']]
+  },
   japan: {
     title: 'Japan Expedition Notes', site: 'field-atlas.test', path: '/japan/expedition-notes',
     body: 'An expedition notebook from Japan shows a sunburst drawn above the outline of Mount Fuji. The same mark appears beside a short entry: “Follow the stone trail.”',
-    links: [['mountfuji', 'Open the Mount Fuji field guide'], ['harbor', 'Browse the harbor chart']]
+    links: [['mountfuji', 'Open the Mount Fuji field guide'], ['fieldlog', 'Read the expedition supply log'], ['harbor', 'Browse the harbor chart']]
   },
   mountfuji: {
     title: 'Mount Fuji', site: 'field-atlas.test', path: '/japan/mount-fuji',
     body: 'The field guide traces an old scouting route along the mountain’s lower slopes. A sketch at the end of the route shows a passage formed by flowing lava.',
-    links: [['lava', 'Read the lava tube survey'], ['japan', 'Return to the Japan expedition notes']]
+    links: [['fieldlog', 'Check the supply log for the mountain party'], ['lava', 'Read the lava tube survey'], ['japan', 'Return to the Japan expedition notes']]
   },
   lava: {
     title: 'Lava Tube Survey', site: 'field-atlas.test', path: '/surveys/lava-tubes',
     body: 'The survey team found a sunburst on a loose stone near the passage. They sent a drawing of the mark to the museum for comparison.',
-    links: [['sunburst', 'Compare the sunburst maker’s mark'], ['mountfuji', 'Revisit Mount Fuji']]
+    links: [['sunburst', 'Compare the sunburst maker’s mark'], ['fieldlog', 'Check who signed the expedition log'], ['mountfuji', 'Revisit Mount Fuji']]
   },
   sunburst: {
     title: 'The Sunburst Mark', site: 'expedition-museum.test', path: '/research/sunburst-mark',
     body: 'The museum matched the drawing to a carved stone in its collection. The mark was recorded on the underside of the piece, where it is easy to miss.',
-    links: [['sunstone', 'Open the Lost Sunstone exhibit'], ['lava', 'Review the lava tube survey']]
+    links: [['seal', 'Compare the town seal’s markings'], ['sunstone', 'Open the Lost Sunstone exhibit'], ['lava', 'Review the lava tube survey']]
   },
   sunstone: {
     title: 'Lost Sunstone', site: 'expedition-museum.test', path: '/exhibits/lost-sunstone',
     body: 'The exhibit displays the recovered Sunstone. Turn it over in the exhibit photograph and you can see the sunburst from the expedition notebook.',
-    links: [['sunburst', 'Read the museum’s notes on the mark'], ['japan', 'Return to the Japan expedition notes']]
+    links: [['sunburst', 'Read the museum’s notes on the mark'], ['fieldlog', 'Revisit the expedition supply log'], ['japan', 'Return to the Japan expedition notes']]
   },
   harbor: {
     title: 'Harbor Chart', site: 'mariners-guild.test', path: '/charts/old-harbor',
     body: 'A chart of the island’s harbor shows two features beside an unlabeled ruin: a reef where a survey ship went down and a signal tower on the cliffs.',
-    links: [['wreck', 'Read the wreck survey'], ['tower', 'Visit the cliff signal tower']]
+    links: [['wreck', 'Read the wreck survey'], ['ledger', 'Read the harbor master’s ledger'], ['tower', 'Visit the cliff signal tower']]
   },
   wreck: {
     title: 'Wreck Survey', site: 'mariners-guild.test', path: '/surveys/reef-wreck',
     body: 'Divers photographed a sealed chart case in the wreck. Inside was a tide table with a set of stone steps drawn beside the lowest tide.',
-    links: [['steps', 'Check the low-tide passage map'], ['harbor', 'Return to the harbor chart']]
+    links: [['ledger', 'Look up the survey ship in the harbor ledger'], ['steps', 'Check the low-tide passage map'], ['harbor', 'Return to the harbor chart']]
   },
   steps: {
     title: 'Low-Tide Passage', site: 'field-atlas.test', path: '/island/low-tide-passage',
     body: 'At low tide, stone steps emerge below the cliff. The survey map follows them through a sea cave to a doorway carved with a compass rose.',
-    links: [['sanctuary', 'Read the Tidal Sanctuary survey'], ['wreck', 'Review the wreck survey']]
+    links: [['sanctuary', 'Read the Tidal Sanctuary survey'], ['tower', 'Compare the signal tower survey'], ['wreck', 'Review the wreck survey']]
   },
   tower: {
     title: 'Cliff Signal Tower', site: 'field-atlas.test', path: '/island/signal-tower',
     body: 'From the old signal tower, the surveyors spotted a second compass rose cut into the rock. The point facing inland lines up with a footpath.',
-    links: [['ridge', 'Follow the ridge path'], ['harbor', 'Return to the harbor chart']]
+    links: [['ridge', 'Follow the ridge path'], ['ledger', 'Look up the tower supplies in the harbor ledger'], ['harbor', 'Return to the harbor chart']]
   },
   ridge: {
     title: 'Ridge Path', site: 'field-atlas.test', path: '/island/ridge-path',
     body: 'The path climbs over the headland and descends to a courtyard. The surveyors marked a doorway with a compass rose on its lintel.',
-    links: [['sanctuary', 'Read the Tidal Sanctuary survey'], ['tower', 'Return to the signal tower']]
+    links: [['wreck', 'Compare the reef wreck survey'], ['sanctuary', 'Read the Tidal Sanctuary survey'], ['tower', 'Return to the signal tower']]
   },
   sanctuary: {
     title: 'Tidal Sanctuary', site: 'expedition-museum.test', path: '/surveys/tidal-sanctuary',
     body: 'Both surveys end at the same sanctuary. The sea cave reaches its lower doorway, while the ridge path enters through the upper courtyard.',
-    links: [['steps', 'Review the low-tide passage map'], ['ridge', 'Review the ridge path']]
+    links: [['steps', 'Review the low-tide passage map'], ['harbor', 'Return to the original harbor chart'], ['ridge', 'Review the ridge path']]
   },
   broadside: {
     title: 'Founders’ Broadside', site: 'civic-archives.test', path: '/documents/founders-broadside',
     body: 'A digitized town announcement has three tiny stars in its border. The archivist’s note points out that the same arrangement appears on a surveyor’s map.',
-    links: [['survey', 'Examine the surveyor’s map'], ['seal', 'Compare the town seal']]
+    links: [['printer', 'Trace the printer’s mark'], ['survey', 'Examine the surveyor’s map'], ['seal', 'Compare the town seal']]
   },
   seal: {
     title: 'Town Seal', site: 'civic-archives.test', path: '/collections/town-seal',
     body: 'The seal shows a bell above the river. The three stars on the broadside are missing here, but the archivist found a match in a handwritten survey.',
-    links: [['survey', 'Examine the surveyor’s map'], ['broadside', 'Return to the broadside']]
+    links: [['survey', 'Examine the surveyor’s map'], ['printer', 'Compare the print shop’s maker’s mark'], ['broadside', 'Return to the broadside']]
   },
   survey: {
     title: 'Surveyor’s Map', site: 'field-atlas.test', path: '/historic-maps/surveyors-map',
     body: 'The three stars mark the bell tower. In the map’s margin, three numbers are separated by dots. A catalog note identifies them as a reference to an inscription.',
-    links: [['inscription', 'Look up the bell tower inscription'], ['broadside', 'Recheck the broadside']]
+    links: [['inscription', 'Look up the bell tower inscription'], ['seal', 'Compare the official town seal'], ['broadside', 'Recheck the broadside']]
   },
   inscription: {
     title: 'Bell Tower Inscription', site: 'heritage-library.test', path: '/inscriptions/bell-tower',
     body: 'The library’s transcription preserves a line worn away on the tower itself. It names a collection of original town records and gives its museum catalog number.',
-    links: [['archive', 'Open the Hidden Archive catalog record'], ['survey', 'Review the surveyor’s map']]
+    links: [['printer', 'Check the town print shop records'], ['archive', 'Open the Hidden Archive catalog record'], ['survey', 'Review the surveyor’s map']]
   },
   archive: {
     title: 'Hidden Archive', site: 'expedition-museum.test', path: '/collections/hidden-archive',
     body: 'The catalog number leads to digitized town records, including the surveyor’s original notebook. Its first page shows the same three stars that started your search.',
-    links: [['inscription', 'Reread the bell tower inscription'], ['broadside', 'Return to the broadside']]
+    links: [['inscription', 'Reread the bell tower inscription'], ['seal', 'See the historic town seal'], ['broadside', 'Return to the broadside']]
   }
 };
 const missions = [
@@ -182,5 +197,4 @@ $('start').addEventListener('click',()=>initMission(missionIndex));$('previous')
 $('copyLog').addEventListener('click',async()=>{const s='The Hyperlink Expedition — '+missions[missionIndex].name+'\n'+clickTrail.map((v,i)=>(i+1)+'. '+pages[v].title+' ('+pages[v].site+')').join('\n')+'\nHyperlinks clicked: '+(clickTrail.length-1)+'\nDifferent websites: '+sites.size;try{await navigator.clipboard.writeText(s);$('copyLog').textContent='Copied!';setTimeout(()=>$('copyLog').textContent='Copy my route',1800);}catch(e){const box=document.createElement('textarea');box.value=s;box.style.width='100%';$('copyLog').after(box);box.select();}});
 window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(pages[id]&&id!==trail[position]){const idx=trail.lastIndexOf(id);if(idx!==-1){position=idx;render();}else{history.replaceState(null,'','#'+trail[position]);}}});
 initMission(0);
-</script>
-</body></html>
+</script></body></html>

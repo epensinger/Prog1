@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)file:///Users/emilypensinger/Documents/Codex/2026-11-16/ope/outputs/hyperlink_expedition.html#japan -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Hyperlink Expedition | An Interactive Web Adventure</title>
+<style>
+:root{color-scheme:light;--ink:#2a2d23;--forest:#25372c;--moss:#354a39;--rust:#813d27;--paper:#fff9e9;--sand:#ede0c1;--line:#cdbc96;--serif:Georgia,"Times New Roman",serif}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:#ebdfc2;font:16px/1.55 system-ui,sans-serif}
+button,a{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.55}
+:focus-visible{outline:3px solid #24567a;outline-offset:3px}
+.wrap{max-width:1240px;margin:auto;padding:26px 32px 16px}
+header{position:relative;isolation:isolate;overflow:hidden;padding:36px 40px;color:#fff7df;background:var(--forest);border-radius:12px;border:1px solid #1a2e24;box-shadow:0 6px 15px #392d2222}
+header::after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;background:radial-gradient(ellipse at 78% 69%,transparent 0 25%,#25372c 68%),repeating-radial-gradient(ellipse at 80% 79%,transparent 0 18px,#c7bb8340 19px 20px,transparent 21px 28px);opacity:.7}
+header::before{content:"✦";position:absolute;right:8%;top:50%;transform:translateY(-50%);font:clamp(5rem,14vw,12rem)/1 var(--serif);color:#e3cc9533;z-index:-1}
+.eyebrow,.sitebrand,.panelhead,.missionbox strong,.webpage h3{font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800}
+.eyebrow{color:#f3cc8c}
+h1{font:700 clamp(2.5rem,6vw,4.9rem)/1 var(--serif);letter-spacing:-.045em;margin:9px 0 13px}
+.intro{max-width:630px;margin:0;color:#f3e7cd}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:17px 0}
+.btn{border:1px solid #957956;border-radius:6px;background:#fff5dc;color:#4f3325;padding:8px 13px;font-weight:750}
+.btn:hover:not(:disabled){background:#ebd5aa}.btn.primary{background:var(--rust);border-color:var(--rust);color:white}.btn.primary:hover{background:#6d3222}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:18px;align-items:start}
+.panel{min-width:0;border:1px solid var(--line);border-radius:10px;background:var(--paper);overflow:hidden;box-shadow:0 4px 10px #3e2f1910}
+.panelhead{padding:12px 17px;background:var(--moss);color:#fff5dc}
+.panelhead h2{margin:0;font-size:inherit}
+.panelbody{padding:16px}
+.missionbox{border-left:4px solid #a66a39;background:#f0e2c3;padding:10px 13px;border-radius:3px;margin-bottom:13px}
+.missionbox strong,.sitebrand,.webpage h3{color:var(--rust)}
+.missionbox p{margin:3px 0 0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-bottom:14px}
+.stat{padding:7px 4px;text-align:center;border:1px solid var(--line);border-radius:5px;background:#faf0d7}
+.stat strong{display:block;font:700 1.6rem/1.1 var(--serif);color:var(--forest)}
+.stat span{font-size:.77rem}
+.browser{border:1px solid #aa946d;border-radius:8px;overflow:hidden}
+.browserbar{padding:8px;display:flex;align-items:center;gap:8px;background:#e6d6b3;border-bottom:1px solid #aa946d}
+.address-label{font-size:.75rem;font-weight:750;color:#57432e}
+.address{min-width:0;flex:1;padding:5px 8px;border:1px solid var(--line);border-radius:4px;background:#fffbef;overflow-wrap:anywhere;font:.8rem/1.45 ui-monospace,monospace}
+.webpage{min-height:315px;padding:20px 24px;background:#fffdf6}
+.webpage h2{font:700 clamp(2rem,4vw,2.7rem)/1.08 var(--serif);margin:6px 0 8px;color:var(--forest)}
+.webpage p{margin:0 0 15px}
+.webpage h3{margin:17px 0 7px}
+.links{padding:0;list-style:none;display:grid;gap:6px;margin:0}
+.links a{display:block;padding:8px 11px;border:1px solid var(--line);background:#fff4d8;border-radius:5px;color:#743b27;font-weight:750;text-underline-offset:3px}
+.links a:hover{background:#f3e1b7;border-color:#a58252}
+.webpage .destination,.notice{margin:12px 0 0;padding:9px 12px;background:#e6eddc;border:1px solid #9eae8a;border-radius:5px;color:#2d4733;font-weight:700}
+.notice{margin:0 0 12px}
+.sideText,.soft{color:#514738;font-size:.88rem}
+.missionlist{display:grid;gap:8px}
+.missionpick{width:100%;text-align:left;border:1px solid var(--line);background:#fff6df;color:var(--ink);padding:9px 11px;border-radius:5px}
+.missionpick:hover{background:#f1e4c4}
+.missionpick.active{border-color:#577256;background:#e6ebd8;box-shadow:inset 3px 0 #577256}
+.missionpick small{display:block;font-size:.8rem;margin-top:2px}
+.history{margin:8px 0;padding-left:23px;font-size:.88rem;max-height:280px;overflow:auto}
+.history li{padding:4px 0;border-bottom:1px solid #e2d4b6}
+.tag{display:inline-block;font-size:.69rem;padding:0 5px;background:#efdfbb;border-radius:4px;color:#563b2b;overflow-wrap:anywhere}
+details{margin-top:18px;border:1px solid var(--line);border-radius:8px;padding:11px 15px;background:var(--paper)}
+details summary{cursor:pointer;font-weight:750;color:var(--forest)}
+.footer{margin:15px 0;color:#514738;font-size:.8rem}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.wrap{padding:17px}}
+@media(max-width:520px){.wrap{padding:12px}header{padding:23px 18px}.panelbody,.webpage{padding:12px}.toolbar{gap:5px}.toolbar .btn{font-size:.84rem;padding:7px 8px}}
+</style>
+</head>
+<body><div class="wrap">
+<header><div class="eyebrow">A World Wide Web adventure</div><h1>The Hyperlink Expedition</h1><p class="intro">Follow a trail of <strong>hyperlinks</strong> across a miniature World Wide Web. Hunt for a lost relic, chart two routes to a tidal sanctuary, and find a hidden archive.</p></header>
+<div class="toolbar"><button class="btn primary" id="start">Restart expedition</button><button class="btn" id="previous" disabled="">← Previous page</button><button class="btn" id="next" disabled="">Next page →</button></div>
+<div class="layout">
+<main class="panel"><div class="panelhead"><h2 id="missionName">Expedition 1 — The Lost Sunstone</h2></div><div class="panelbody"><div class="missionbox" id="objective"><strong>Field assignment</strong><p>Start with the <strong>Japan Expedition Notes</strong>. Follow the clues to the <strong>Lost Sunstone</strong>. Can you get there in four hyperlink clicks?</p></div><div class="stats"><div class="stat"><strong id="clickCount">0</strong><span>Hyperlinks clicked</span></div><div class="stat"><strong id="uniqueCount">1</strong><span>Unique pages visited</span></div><div class="stat"><strong id="websiteCount">1</strong><span>Websites visited</span></div></div><div id="alert" role="status" aria-live="polite"></div><div class="browser" aria-label="Simulated browser"><div class="browserbar"><span class="address-label">Web address</span><div class="address" id="address">https://field-atlas.test/japan/expedition-notes</div></div><article class="webpage" id="webpage" aria-live="polite"><div class="sitebrand">field-atlas.test</div><h2>Japan Expedition Notes</h2><p>An expedition notebook from Japan shows a sunburst drawn above the outline of Mount Fuji. The same mark appears beside a short entry: “Follow the stone trail.”</p><h3>Follow a trail</h3><ul class="links"><li><a href="file:///Users/emilypensinger/Documents/Codex/2026-11-16/ope/outputs/hyperlink_expedition.html#mountfuji" data-target="mountfuji">Open the Mount Fuji field guide ↗</a></li><li><a href="file:///Users/emilypensinger/Documents/Codex/2026-11-16/ope/outputs/hyperlink_expedition.html#harbor" data-target="harbor">Browse the harbor chart ↗</a></li></ul></article></div><p class="soft" style="font-size:.83rem">Navigation rule: Only the underlined links <em>inside</em> the webpage count toward the expedition. The Previous and Next buttons are for reviewing your navigation and do not count as hyperlink clicks.</p></div></main>
+<aside><section class="panel"><div class="panelhead"><h2>Expedition map</h2></div><div class="panelbody"><div class="missionlist" id="missions"><button class="missionpick active" aria-pressed="true" data-mission="0"><strong>1. The Lost Sunstone</strong><small>Start: Japan Expedition Notes → Goal: Lost Sunstone</small></button><button class="missionpick " aria-pressed="false" data-mission="1"><strong>2. Two Trails to the Tidal Sanctuary</strong><small>Start: Harbor Chart → Goal: Tidal Sanctuary</small></button><button class="missionpick " aria-pressed="false" data-mission="2"><strong>3. The Hidden Archive</strong><small>Start: Founders’ Broadside → Goal: Hidden Archive</small></button></div></div></section><section class="panel" style="margin-top:16px"><div class="panelhead"><h2>Field journal</h2></div><div class="panelbody"><div class="sideText">Pages you reached by following hyperlinks</div><ol class="history" id="history"><li><strong>Japan Expedition Notes</strong> <span class="tag">field-atlas.test</span> <span class="soft">(start)</span></li></ol><p class="sideText" id="siteChanges">Times you crossed to a different website: 0</p><button class="btn" id="copyLog">Copy my route</button></div></section></aside>
+</div>
+<details><summary>Before you begin: what to know about the web</summary><p>A <strong>webpage</strong> is one document. A <strong>website</strong> is a collection of pages, usually sharing a domain name. A <strong>hyperlink</strong> connects a page to another page or resource. The <strong>World Wide Web</strong> is a network of linked resources accessed over the internet. Links can point to pages on the same website or a different website. A link from A to B does <em>not</em> automatically create a link from B back to A.</p><p>The websites, artifacts, and clues in these expeditions are fictional. The web addresses are simulated within this HTML file. No real internet connection is needed.</p></details>
+<p class="footer">Classroom activity · Works offline</p>
+</div>
+<script>
+'use strict';
+const pages = {
+  japan: {
+    title: 'Japan Expedition Notes', site: 'field-atlas.test', path: '/japan/expedition-notes',
+    body: 'An expedition notebook from Japan shows a sunburst drawn above the outline of Mount Fuji. The same mark appears beside a short entry: “Follow the stone trail.”',
+    links: [['mountfuji', 'Open the Mount Fuji field guide'], ['harbor', 'Browse the harbor chart']]
+  },
+  mountfuji: {
+    title: 'Mount Fuji', site: 'field-atlas.test', path: '/japan/mount-fuji',
+    body: 'The field guide traces an old scouting route along the mountain’s lower slopes. A sketch at the end of the route shows a passage formed by flowing lava.',
+    links: [['lava', 'Read the lava tube survey'], ['japan', 'Return to the Japan expedition notes']]
+  },
+  lava: {
+    title: 'Lava Tube Survey', site: 'field-atlas.test', path: '/surveys/lava-tubes',
+    body: 'The survey team found a sunburst on a loose stone near the passage. They sent a drawing of the mark to the museum for comparison.',
+    links: [['sunburst', 'Compare the sunburst maker’s mark'], ['mountfuji', 'Revisit Mount Fuji']]
+  },
+  sunburst: {
+    title: 'The Sunburst Mark', site: 'expedition-museum.test', path: '/research/sunburst-mark',
+    body: 'The museum matched the drawing to a carved stone in its collection. The mark was recorded on the underside of the piece, where it is easy to miss.',
+    links: [['sunstone', 'Open the Lost Sunstone exhibit'], ['lava', 'Review the lava tube survey']]
+  },
+  sunstone: {
+    title: 'Lost Sunstone', site: 'expedition-museum.test', path: '/exhibits/lost-sunstone',
+    body: 'The exhibit displays the recovered Sunstone. Turn it over in the exhibit photograph and you can see the sunburst from the expedition notebook.',
+    links: [['sunburst', 'Read the museum’s notes on the mark'], ['japan', 'Return to the Japan expedition notes']]
+  },
+  harbor: {
+    title: 'Harbor Chart', site: 'mariners-guild.test', path: '/charts/old-harbor',
+    body: 'A chart of the island’s harbor shows two features beside an unlabeled ruin: a reef where a survey ship went down and a signal tower on the cliffs.',
+    links: [['wreck', 'Read the wreck survey'], ['tower', 'Visit the cliff signal tower']]
+  },
+  wreck: {
+    title: 'Wreck Survey', site: 'mariners-guild.test', path: '/surveys/reef-wreck',
+    body: 'Divers photographed a sealed chart case in the wreck. Inside was a tide table with a set of stone steps drawn beside the lowest tide.',
+    links: [['steps', 'Check the low-tide passage map'], ['harbor', 'Return to the harbor chart']]
+  },
+  steps: {
+    title: 'Low-Tide Passage', site: 'field-atlas.test', path: '/island/low-tide-passage',
+    body: 'At low tide, stone steps emerge below the cliff. The survey map follows them through a sea cave to a doorway carved with a compass rose.',
+    links: [['sanctuary', 'Read the Tidal Sanctuary survey'], ['wreck', 'Review the wreck survey']]
+  },
+  tower: {
+    title: 'Cliff Signal Tower', site: 'field-atlas.test', path: '/island/signal-tower',
+    body: 'From the old signal tower, the surveyors spotted a second compass rose cut into the rock. The point facing inland lines up with a footpath.',
+    links: [['ridge', 'Follow the ridge path'], ['harbor', 'Return to the harbor chart']]
+  },
+  ridge: {
+    title: 'Ridge Path', site: 'field-atlas.test', path: '/island/ridge-path',
+    body: 'The path climbs over the headland and descends to a courtyard. The surveyors marked a doorway with a compass rose on its lintel.',
+    links: [['sanctuary', 'Read the Tidal Sanctuary survey'], ['tower', 'Return to the signal tower']]
+  },
+  sanctuary: {
+    title: 'Tidal Sanctuary', site: 'expedition-museum.test', path: '/surveys/tidal-sanctuary',
+    body: 'Both surveys end at the same sanctuary. The sea cave reaches its lower doorway, while the ridge path enters through the upper courtyard.',
+    links: [['steps', 'Review the low-tide passage map'], ['ridge', 'Review the ridge path']]
+  },
+  broadside: {
+    title: 'Founders’ Broadside', site: 'civic-archives.test', path: '/documents/founders-broadside',
+    body: 'A digitized town announcement has three tiny stars in its border. The archivist’s note points out that the same arrangement appears on a surveyor’s map.',
+    links: [['survey', 'Examine the surveyor’s map'], ['seal', 'Compare the town seal']]
+  },
+  seal: {
+    title: 'Town Seal', site: 'civic-archives.test', path: '/collections/town-seal',
+    body: 'The seal shows a bell above the river. The three stars on the broadside are missing here, but the archivist found a match in a handwritten survey.',
+    links: [['survey', 'Examine the surveyor’s map'], ['broadside', 'Return to the broadside']]
+  },
+  survey: {
+    title: 'Surveyor’s Map', site: 'field-atlas.test', path: '/historic-maps/surveyors-map',
+    body: 'The three stars mark the bell tower. In the map’s margin, three numbers are separated by dots. A catalog note identifies them as a reference to an inscription.',
+    links: [['inscription', 'Look up the bell tower inscription'], ['broadside', 'Recheck the broadside']]
+  },
+  inscription: {
+    title: 'Bell Tower Inscription', site: 'heritage-library.test', path: '/inscriptions/bell-tower',
+    body: 'The library’s transcription preserves a line worn away on the tower itself. It names a collection of original town records and gives its museum catalog number.',
+    links: [['archive', 'Open the Hidden Archive catalog record'], ['survey', 'Review the surveyor’s map']]
+  },
+  archive: {
+    title: 'Hidden Archive', site: 'expedition-museum.test', path: '/collections/hidden-archive',
+    body: 'The catalog number leads to digitized town records, including the surveyor’s original notebook. Its first page shows the same three stars that started your search.',
+    links: [['inscription', 'Reread the bell tower inscription'], ['broadside', 'Return to the broadside']]
+  }
+};
+const missions = [
+  {name:'Expedition 1 — The Lost Sunstone',start:'japan',target:'sunstone',brief:'Start with the <strong>Japan Expedition Notes</strong>. Follow the clues to the <strong>Lost Sunstone</strong>. Can you get there in four hyperlink clicks?'},
+  {name:'Expedition 2 — Two Trails to the Tidal Sanctuary',start:'harbor',target:'sanctuary',brief:'Start at the <strong>Harbor Chart</strong> and reach the <strong>Tidal Sanctuary</strong>. Copy your route from the field journal, then restart and find a different route to the same place.'},
+  {name:'Expedition 3 — The Hidden Archive',start:'broadside',target:'archive',brief:'Start with the <strong>Founders’ Broadside</strong>. Follow clues in historical records to the <strong>Hidden Archive</strong>. Watch the web address as you move from one website to another.'}
+];
+let missionIndex=0,trail=[],position=0,clickTrail=[],crossings=0,visited=new Set(),sites=new Set();
+const $=id=>document.getElementById(id);const siteOf=id=>pages[id].site;
+function initMission(index){missionIndex=index;let start=missions[index].start;trail=[start];position=0;clickTrail=[start];crossings=0;visited=new Set([start]);sites=new Set([siteOf(start)]);history.replaceState(null,'','#'+start);render();}
+function navigate(target){if(!pages[target])return;const old=trail[position];trail=trail.slice(0,position+1);trail.push(target);position++;clickTrail.push(target);visited.add(target);sites.add(siteOf(target));if(siteOf(old)!==siteOf(target))crossings++;history.pushState(null,'','#'+target);render();}
+function historyMove(change){let next=position+change;if(next<0||next>=trail.length)return;position=next;history.replaceState(null,'','#'+trail[position]);render();}
+function render(){const m=missions[missionIndex],id=trail[position],p=pages[id];$('missionName').textContent=m.name;$('objective').innerHTML='<strong>Field assignment</strong><p>'+m.brief+'</p>';
+ $('clickCount').textContent=clickTrail.length-1;$('uniqueCount').textContent=visited.size;$('websiteCount').textContent=sites.size;
+ $('address').textContent='https://'+p.site+p.path;
+ const links=p.links.map(([target,label])=>'<li><a href="#'+target+'" data-target="'+target+'">'+label+' ↗</a></li>').join('');
+ $('webpage').innerHTML='<div class="sitebrand">'+p.site+'</div><h2>'+p.title+'</h2><p>'+p.body+'</p><h3>Follow a trail</h3><ul class="links">'+links+'</ul>'+(id===m.target?'<p class="destination">✓ Expedition complete!'+(missionIndex===1?' Now try a second route.':'')+'</p>':'');
+ $('webpage').querySelectorAll('a[data-target]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();navigate(a.dataset.target)}));
+ $('history').innerHTML=clickTrail.map((v,i)=>'<li><strong>'+pages[v].title+'</strong> <span class="tag">'+pages[v].site+'</span>'+(i===0?' <span class="soft">(start)</span>':'')+'</li>').join('');
+ $('siteChanges').textContent='Times you crossed to a different website: '+crossings;
+ $('previous').disabled=position===0;$('next').disabled=position===trail.length-1;
+ $('missions').innerHTML=missions.map((x,i)=>'<button class="missionpick '+(i===missionIndex?'active':'')+'" aria-pressed="'+(i===missionIndex)+'" data-mission="'+i+'"><strong>'+(i+1)+'. '+x.name.split(' — ')[1]+'</strong><small>Start: '+pages[x.start].title+' → Goal: '+pages[x.target].title+'</small></button>').join('');
+ $('missions').querySelectorAll('[data-mission]').forEach(b=>b.addEventListener('click',()=>initMission(Number(b.dataset.mission))));
+ $('alert').innerHTML=id===m.target?'<div class="notice">You reached your destination by following hyperlinks.</div>':'';
+}
+$('start').addEventListener('click',()=>initMission(missionIndex));$('previous').addEventListener('click',()=>historyMove(-1));$('next').addEventListener('click',()=>historyMove(1));
+$('copyLog').addEventListener('click',async()=>{const s='The Hyperlink Expedition — '+missions[missionIndex].name+'\n'+clickTrail.map((v,i)=>(i+1)+'. '+pages[v].title+' ('+pages[v].site+')').join('\n')+'\nHyperlinks clicked: '+(clickTrail.length-1)+'\nDifferent websites: '+sites.size;try{await navigator.clipboard.writeText(s);$('copyLog').textContent='Copied!';setTimeout(()=>$('copyLog').textContent='Copy my route',1800);}catch(e){const box=document.createElement('textarea');box.value=s;box.style.width='100%';$('copyLog').after(box);box.select();}});
+window.addEventListener('hashchange',()=>{const id=location.hash.slice(1);if(pages[id]&&id!==trail[position]){const idx=trail.lastIndexOf(id);if(idx!==-1){position=idx;render();}else{history.replaceState(null,'','#'+trail[position]);}}});
+initMission(0);
+</script>
+</body></html>
